@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react';
 import ListItem from './ListItem';
-
+import { ITask } from '../../interfaces/Interface';
 
 const DUMMY_LIST = [
 
@@ -12,15 +12,15 @@ const DUMMY_LIST = [
 
 ]
 
-interface Task {
-    name:string,
-    age:number
-}
+// interface Task {
+//     name:string,
+//     age:number
+// }
 
 const TodoList = () => {
 const [name, setName] = useState<string>("");
 const [age, setAge] = useState<number>(0);
-const [todo, setTodo] = useState<Task[]>([])
+const [todo, setTodo] = useState<ITask[]>([])
 
 const nameHandler = (event:ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value)
@@ -32,13 +32,20 @@ const ageHandler = (event:ChangeEvent<HTMLInputElement>) => {
 
 
 const addList = ():void=>{
-
     const newList = {name:name,age:age}
     setTodo([...todo,newList])
     setName("")
     setAge(0)
 
-    console.log(todo)
+}
+
+const deleteList =(listName:string):void=>{
+
+    setTodo(todo.filter((task)=>{
+
+        return task.name != listName 
+    }))
+
 }
 
     return (
@@ -47,9 +54,9 @@ const addList = ():void=>{
             <input type="number" placeholder='age'  onChange={ageHandler} />
             <button onClick={addList}>Add Task</button>
             <div className='listData'>
-            {todo.map( (item:Task, key:number)=>{
+            {todo.map( (item:ITask, key:number)=>{
 
-               return  <ListItem item={item} key={key} />
+               return  <ListItem deleteList={deleteList} item={item} key={key} />
                
              })} 
             </div>
