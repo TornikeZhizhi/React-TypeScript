@@ -5,18 +5,22 @@ import TodoList from './components/TodoList/TodoList';
 import Todo from './components/maxTodo/Todo';
 
 import TodoModel from './models/ModelTodo';
+import Typecourse from './typecourse/Typecourse';
+
+
 
 
 function App() {
 
-  const todos = [
-    new TodoModel("learn React"),
-    new TodoModel("learn typescript")
-  ]
+  // const todos = [
+  //   new TodoModel("learn React"),
+  //   new TodoModel("learn typescript")
+  // ] 
   return (
     <div className="App">
-      <TodoList/>
-      <Todo items={todos}/>
+      <Typecourse/>
+      {/* <TodoList/>  */}
+      {/* <Todo items={todos}/> */}
     </div>
   );
 }
