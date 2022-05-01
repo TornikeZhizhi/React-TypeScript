@@ -3,14 +3,25 @@ import "./css/wheel.css";
 import WheelItem from './WheelItem';
 import Dummy_WheelArray from "./WheelData.json";
 
+
+interface IwheelData {
+
+  text:string;
+  id:number;
+  iconClass:string;
+  textBlack:boolean;
+  activeClass:boolean;
+
+}
+
 const Wheel = () => {
 
-    const spinDiv = useRef<any>()
-    const [wheelArray, setWheelArray] = useState(Dummy_WheelArray);
-    const [wheelAnime, setWheelAnime] = useState(false)
-    const [initialSpinRotation, setInitialSpinRotation] = useState(0)
-    const [wheelOffset, setwheelOffset] = useState(0);
-    console.log(spinDiv.current)
+    // const spinDiv = useRef<any>()
+    const [wheelArray, setWheelArray] = useState<IwheelData[]>(Dummy_WheelArray);
+    const [wheelAnime, setWheelAnime] = useState<boolean>(false)
+    const [initialSpinRotation, setInitialSpinRotation] = useState<number>(0)
+    const [wheelOffset, setwheelOffset] = useState<number>(0);
+    // console.log(spinDiv.current)
     let spinValue = 0;
     let sectionAmount = 16;
     let spinCount = 5;
