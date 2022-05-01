@@ -1,10 +1,12 @@
 import React from 'react';
 import Parent from './props/Parent';
+import GuestList from './state/GuestList';
 
 const Typecourse = () => {
     return (
         <div>
-            <Parent/>
+            <GuestList/>
+            {/* <Parent/> */}
         </div>
     );
 };
