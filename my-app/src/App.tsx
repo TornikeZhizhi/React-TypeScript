@@ -8,6 +8,7 @@ import HeaderContext from './context/HeaderContext';
 import ProductsContext from './context/ProductsContext';
 import Products from './components/products/Products';
 import Wheel from './components/Wheel/Wheel';
+import PaletteApp from './ColorProject/PaletteApp';
 
 
 
@@ -30,11 +31,12 @@ function App() {
 
       <HeaderContext>
 
-        <Header></Header>
+        {/* <Header></Header> */}
         {/* <Products/> */}
         {/* <Typecourse/> */}
         {/* <TodoList/>  */}
-        <Wheel/>
+        {/* <Wheel/> */}
+        <PaletteApp />
       </HeaderContext>
       </ProductsContext>
     </div>

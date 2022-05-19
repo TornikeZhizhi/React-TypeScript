@@ -9,6 +9,7 @@ const Header = () => {
     
 
     const toggleHandler = ()=>{
+
         setIsDarkMode(!isDarkMode)
     }
     
