@@ -6,7 +6,7 @@ import "../ColorCss/Palette.css";
 const Palette = (props) => {
 
     const colorBoxes = props.colors.map(color=>(
-        <ColorBox background={color.color} name={color.name}></ColorBox>
+        <ColorBox background={color.color} name={color.name} key={color.name}></ColorBox>
     ))
 
     return (

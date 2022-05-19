@@ -6,7 +6,7 @@
   position: relative;
   cursor: pointer;
   margin-bottom: -3.5px;
-  overflow: hidden;
+
 }
 
 .copy-button {
@@ -27,6 +27,7 @@
   text-transform: uppercase;
   border: none;
   opacity: 0;
+  cursor: pointer;
 }
 
 .ColorBox:hover .copy-button {
@@ -109,6 +110,7 @@
   margin-bottom: 0;
   padding: 1rem;
   text-transform: uppercase;
+  font-size: 35px;
 }
 .copy-msg p {
   font-size: 2rem;
