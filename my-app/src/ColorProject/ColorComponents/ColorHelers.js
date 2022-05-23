@@ -2,6 +2,7 @@ import chroma from "chroma-js";
 const levels = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 
 function generatePalette(starterPalette) {
+    console.log(starterPalette)
   let newPalette = {
     paletteName: starterPalette.paletteName,
     id: starterPalette.id,
@@ -11,6 +12,8 @@ function generatePalette(starterPalette) {
   for (let level of levels) {
     newPalette.colors[level] = [];
   }
+
+  
   for (let color of starterPalette.colors) {
     let scale = getScale(color.color, 10).reverse();
     for (let i in scale) {

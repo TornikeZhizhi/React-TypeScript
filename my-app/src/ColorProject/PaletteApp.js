@@ -4,7 +4,7 @@ import SeedColors from './SeedColors';
 import {generatePalette} from "./ColorComponents/ColorHelers"
 
 const PaletteApp = () => {
-    console.log(generatePalette(SeedColors[4]))
+    // console.log(generatePalette(SeedColors[4]))
     return (
         <>
             
