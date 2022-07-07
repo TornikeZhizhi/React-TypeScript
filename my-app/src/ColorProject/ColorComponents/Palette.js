@@ -14,11 +14,12 @@ const Palette = ({palette}) => {
     const changeLevel = (level) => {
 
         setLever(level)
-        console.log(level)
+
     }
 
     const changeFormat = (e)=> {
-        setFormat(e.target.value)
+        console.log(e)
+        setFormat(e)
     }
 
     const colorBoxes = palette.colors[level].map(color=>(
